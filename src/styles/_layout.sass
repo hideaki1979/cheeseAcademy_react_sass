@@ -17,8 +17,11 @@
 .jatitle
     font-size: v.$font-size-title
     text-align: center
-    margin-bottom: v.$section-margin
+    margin-bottom: v.$section-margin-mobile
     color: v.$text-color
+
+    @include v.tablet-up
+        margin-bottom: v.$section-margin
 
 // ヘッダー
 .honbun
