@@ -39,8 +39,8 @@ React + Vite + Sass で作成したチーズ職人養成学校「チーズアカ
 
 ```bash
 # リポジトリをクローン
-git clone <repository-url>
-cd sasspro/sassproject
+git clone https://github.com/hideaki1979/cheeseAcademy_react_sass.git
+cd sassproject
 
 # 依存関係をインストール
 npm install
@@ -301,3 +301,5 @@ public/
 ## 作成者
 
 チーズアカデミー TOKYO 開発チーム
+
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/hideaki1979/cheeseAcademy_react_sass?utm_source=oss&utm_medium=github&utm_campaign=hideaki1979%2FcheeseAcademy_react_sass&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)

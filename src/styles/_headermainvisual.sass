@@ -72,11 +72,10 @@
 
 // デスクトップナビ（PC用）
 .tabmenu-animation
-    // モバイル・タブレットでは非表示
+    // デスクトップナビゲーションの表示/非表示制御
     @include v.mobile
         display: none
 
-    // PCサイズでは表示
     @include v.tablet
         display: none
 
@@ -179,15 +178,13 @@
 
 .maintitle-a, .maintitle-b
     animation: slideIn 1s ease-in-out
-    // PCサイズでは非表示
+    // 各デバイスサイズでのフォントサイズ調整
     @include v.desktop
         font-size: v.$font-size-medium
 
-    // タブレットサイズでは非表示
     @include v.tablet
         font-size: v.$font-size-section
 
-    // モバイルサイズでは非表示
     @include v.mobile
         font-size: v.$font-size-title
 
