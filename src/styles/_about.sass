@@ -1,4 +1,4 @@
-@use './variables' as v
+@use 'variables' as v
 
 .about
     margin-bottom: v.$section-margin
@@ -36,7 +36,7 @@
 
     &__image-track
         display: flex
-        width: calc(100% * 3) // 1/3移動することで無限ループ効果
+        width: calc(100% * 2) // 1/2移動することで無限ループ効果
         animation: scroll-infinite 30s linear infinite
 
         // ホバー時にアニメーション停止
@@ -76,4 +76,4 @@
     0%
         transform: translateX(0)
     100%
-        transform: translateX(calc(-100% / 3)) // 1/3移動することで無限ループ効果
+        transform: translateX(calc(-100% / 2)) // 1/2移動することで無限ループ効果

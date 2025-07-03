@@ -18,21 +18,33 @@ const Header = () => {
                 <div
                     className={`hamburger${isMenuOpen ? ' active' : ''}`}
                     onClick={toggleMenu}
+                    role='button'
+                    tabIndex={0}
+                    aria-label='メニューを開く'
+                    aria-expanded={isMenuOpen}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault()
+                            toggleMenu()
+                        }
+                    }}
                 >
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
 
-                <ul
+                <nav
                     className={`slide-menu${isMenuOpen ? ' active' : ''}`}
+                    aria-label='モバイルメニュー'
+                    aria-hidden={!isMenuOpen}
                 >
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#course">COURSE</a></li>
                     <li><a href="#news">NEWS</a></li>
                     <li><a href="#access">ACCESS</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                </ul>
+                </nav>
             </div>
 
             {/* デスクトップナビ */}

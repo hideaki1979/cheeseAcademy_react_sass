@@ -40,7 +40,7 @@ React + Vite + Sass で作成したチーズ職人養成学校「チーズアカ
 ```bash
 # リポジトリをクローン
 git clone https://github.com/hideaki1979/cheeseAcademy_react_sass.git
-cd sassproject
+cd cheeseAcademy_react_sass
 
 # 依存関係をインストール
 npm install

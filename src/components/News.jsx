@@ -28,7 +28,10 @@ const News = () => {
 
     const handleMoreClick = () => {
         // 実際のプロジェクトではページ遷移やモーダル表示などを実装
-        window.open('https://www.google.co.jp/', '_blank')
+        const newWindow = window.open('https://www.google.co.jp/', '_blank')
+        if (newWindow) {
+            newWindow.opener = null
+        }
     }
 
     return (

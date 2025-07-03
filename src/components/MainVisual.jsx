@@ -1,8 +1,8 @@
 import React from 'react'
 
-const MainVisual = () => {
+const MainVisual = (props) => {
     return (
-        <div className='mainvisual'>
+        <div className={`mainvisual ${props.className || ''}`}>
             <h1 className='maintitle-a'>
                 セカイを変えるチーズを作ろう
             </h1>

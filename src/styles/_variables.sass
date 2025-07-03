@@ -35,6 +35,10 @@ $padding-tablet: 24px
 $padding-mobile: 16px
 $padding-Y: 16px
 
+// Header用関数
+$hamburger-top: 40px
+$hamburger-right: 56px
+
 // Course用変数
 $course-box-padding: 50px
 $course-box-padding-tablet: 32px
@@ -54,7 +58,7 @@ $course-line-height-mobile: 1.5em
         @content
 
 @mixin tablet
-    @media screen and (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 1px})
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: #{($breakpoint-desktop - 1px)})
         @content
 
 @mixin desktop

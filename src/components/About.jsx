@@ -3,13 +3,13 @@ import React from 'react'
 const About = () => {
     // 画像リストを配列で管理
     const aboutImages = [
-        'about_01.jpg',
-        'about_02.jpg',
-        'about_03.jpg',
-        'about_04.jpg',
-        'course_01.jpg',
-        'course_02.jpg',
-        'course_03.jpg'
+        { filename: 'about_01.jpg', alt: 'チーズ製造の実習風景' },
+        { filename: 'about_02.jpg', alt: 'アカデミーの教室での授業' },
+        { filename: 'about_03.jpg', alt: '学生たちのグループワーク' },
+        { filename: 'about_04.jpg', alt: '完成したチーズの品評会' },
+        { filename: 'course_01.jpg', alt: '農園での実地研修' },
+        { filename: 'course_02.jpg', alt: '講師による理論授業' },
+        { filename: 'course_03.jpg', alt: '卒業制作の発表会' }
     ]
 
     return (
@@ -33,9 +33,9 @@ const About = () => {
                 <div className='about__image-carousel'>
                     <div className='about__image-track'>
                         {/* 画像を2セット分レンダリングして無限ループ効果を作る */}
-                        {[...aboutImages, ...aboutImages, ...aboutImages].map((image, index) => (
+                        {[...aboutImages, ...aboutImages].map((image, index) => (
                             <div key={index} className='about__image-item'>
-                                <img src={`/img/${image}`} alt="チーズアカデミーの様子" />
+                                <img src={`/img/${image.filename}`} alt={image.alt} />
                             </div>
                         ))}
                     </div>
