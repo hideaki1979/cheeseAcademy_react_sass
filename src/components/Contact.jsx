@@ -62,9 +62,14 @@ const Contact = () => {
                     <table className='contact__table'>
                         <tbody>
                             <tr>
-                                <th className='contact__item'>名前</th>
+                                <th className='contact__item'>
+                                    <label htmlFor='name'>
+                                        名前
+                                    </label>
+                                </th>
                                 <td className='contact__body'>
                                     <input
+                                        id='name'
                                         type="text"
                                         name='name'
                                         value={formData.name}
@@ -75,9 +80,14 @@ const Contact = () => {
                                 </td>
                             </tr>
                             <tr>
-                                <th className='contact__item'>カナ</th>
+                                <th className='contact__item'>
+                                    <label htmlFor='kana'>
+                                        カナ
+                                    </label>
+                                </th>
                                 <td className='contact__body'>
                                     <input
+                                        id='kana'
                                         type="text"
                                         name='kana'
                                         value={formData.kana}
@@ -88,7 +98,11 @@ const Contact = () => {
                                 </td>
                             </tr>
                             <tr>
-                                <th className='contact__item'>メール</th>
+                                <th className='contact__item'>
+                                    <label htmlFor='kana'>
+                                        メール
+                                    </label>
+                                </th>
                                 <td className='contact__body'>
                                     <input
                                         type="email"
