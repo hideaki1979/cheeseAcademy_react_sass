@@ -6,6 +6,7 @@ import About from './About'
 import News from './News'
 import Course from './Course'
 import Access from './Access'
+import Contact from './Contact'
 
 const CheeseAcademy = () => {
     return (
@@ -16,6 +17,7 @@ const CheeseAcademy = () => {
             <Course />
             <News />
             <Access />
+            <Contact />
         </div>
     )
 }
