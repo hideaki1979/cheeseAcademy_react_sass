@@ -1,0 +1,197 @@
+@use 'variables' as v
+
+// ヘッダーコンポーネント
+#header
+    margin: 32px auto
+
+.tabmenu-area
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    // レスポンシブパディング調整
+    @include v.desktop
+        padding: v.$padding-Y v.$padding-desktop
+
+    @include v.tablet
+        padding: v.$padding-Y v.$padding-tablet
+
+    @include v.mobile
+        padding: v.$padding-Y v.$padding-mobile
+
+    img
+        height: 40px
+        width: auto
+
+.header-link
+    display: flex
+    gap: 40px
+
+    a
+        text-decoration: none
+        color: v.$text-color
+        font-weight: 500
+        transition: color 0.3s ease
+        position: relative
+
+        // 下線のアニメーション用疑似要素
+        &::after
+            content: ''
+            position: absolute
+            bottom: -4px
+            left: 0
+            width: 100%
+            height: 2px
+            background-color: v.$primary-color
+            transform: scaleX(0)
+            transform-origin: center
+            transition: transform 0.3s ease
+
+        &:hover
+            color: v.$primary-color
+
+            // 下線のアニメーション
+            &::after
+                transform: scaleX(1)
+
+// ハンバーガーメニューエリア（モバイル・タブレット用）
+.hamburger-area
+    margin-top: 24px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-left: v.$padding-mobile
+
+    // PCサイズでは非表示
+    @include v.desktop
+        display: none
+
+    img
+        height: 40px
+        width: auto
+
+// デスクトップナビ（PC用）
+.tabmenu-animation
+    // デスクトップナビゲーションの表示/非表示制御
+    @include v.mobile
+        display: none
+
+    @include v.tablet
+        display: none
+
+// ハンバーガーメニューボタン
+.hamburger
+    width: 40px
+    height: 24px
+    position: fixed
+    top: v.$hamburger-top
+    right: v.$hamburger-right
+    z-index: 10
+    cursor: pointer
+
+    // PCサイズでは非表示
+    @include v.desktop
+        display: none
+
+.hamburger span
+    position: absolute
+    width: 100%
+    height: 2px
+    background: v.$text-color
+    transition: .3s
+
+.hamburger span:first-of-type
+    top: 0
+
+.hamburger span:nth-of-type(2)
+    top: 50%
+
+.hamburger span:last-of-type
+    bottom: 0
+
+// スライドメニュー
+.slide-menu
+    background-color: rgba(0, 0, 0, 0.7)
+    position: fixed
+    top: 0
+    height: 100vh
+    width: 100%
+    left: 0
+    transform: translateX(100%)
+    transition: .5s
+    z-index: 5
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    // PCサイズでは非表示
+    @include v.desktop
+        display: none
+
+.slide-menu li
+    margin: 16px 0
+
+    a
+        color: v.$white
+        text-decoration: none
+        font-size: v.$font-size-section
+        font-weight: 500
+
+// ハンバーガーメニューアクティブ状態
+.hamburger.active span:first-of-type
+    top: 50%
+    transform: translateY(-50%) rotate(45deg)
+
+.hamburger.active span:nth-of-type(2)
+    opacity: 0
+
+.hamburger.active span:last-of-type
+    bottom: 50%
+    transform: translateY(50%) rotate(-45deg)
+
+.slide-menu.active
+    transform: translateX(0)
+
+// メインビジュアル
+.mainvisual
+    background: url('/img/mainbg.png') no-repeat center / cover
+    height: 440px
+    color: v.$white
+    text-align: center
+    padding-top: 180px
+    margin-bottom: v.$section-margin
+    border: 2px solid v.$text-light
+    border-radius: 30px
+
+    // タブレット・モバイル対応
+    @include v.tablet
+        height: 320px
+        padding-top: 120px
+        border-radius: 20px
+
+    @include v.mobile
+        height: 240px
+        padding-top: 104px
+        border-radius: 15px
+        margin-bottom: 40px
+
+.maintitle
+    animation: slideIn 1s ease-in-out
+    // 各デバイスサイズでのフォントサイズ調整
+    @include v.desktop
+        font-size: v.$font-size-medium
+
+    @include v.tablet
+        font-size: v.$font-size-section
+
+    @include v.mobile
+        font-size: v.$font-size-title
+
+@keyframes slideIn
+    0%
+        opacity: 0
+        transform: translateY(-100%)
+    100%
+        opacity: 1
+        transform: translateY(0)

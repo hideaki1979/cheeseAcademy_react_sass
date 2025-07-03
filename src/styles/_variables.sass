@@ -1,0 +1,75 @@
+// 変数定義
+$primary-color: #ffd61a
+$text-color: #222222
+$text-light: #cacaca
+$text-gray: dimgray
+$background-light: #fafafa
+$background-gray: #eee
+$background-dark: #707070
+$border-color: #ccc
+$white: #fff
+$button-hover: burlywood
+
+// フォントサイズ
+$font-family: "M PLUS Rounded 1c", sans-serif
+$font-size-small: 12px
+$font-size-medium: 32px
+$font-size-large: 48px
+$font-size-title: 18px
+$font-size-base: 16px
+$font-size-section: 24px
+
+// ブレイクポイント
+$breakpoint-mobile: 767px
+$breakpoint-tablet: 768px
+$breakpoint-desktop: 1024px
+
+// レイアウト変数
+$container-width: 1200px
+$section-margin: 56px
+$content-padding: 40px
+
+// レスポンシブ用パディング変数
+$padding-desktop: 32px
+$padding-tablet: 24px
+$padding-mobile: 16px
+$padding-Y: 16px
+
+// Header用関数
+$hamburger-top: 40px
+$hamburger-right: 56px
+
+// Course用変数
+$course-box-padding: 50px
+$course-box-padding-tablet: 32px
+$course-box-padding-mobile: 20px
+$course-box-margin: 24px
+$course-title-margin: 40px
+$course-title-margin-mobile: 24px
+$course-text-top-padding: 90px
+$course-text-top-padding-tablet: 60px
+$course-text-top-padding-mobile: 40px
+$course-line-height: 1.7em
+$course-line-height-mobile: 1.5em
+
+// レスポンシブmixin
+@mixin mobile
+    @media screen and (max-width: $breakpoint-mobile)
+        @content
+
+@mixin tablet
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: #{($breakpoint-desktop - 1px)})
+        @content
+
+@mixin desktop
+    @media screen and (min-width: $breakpoint-desktop)
+        @content
+
+// モバイルファースト用のmixin（〜以上の場合）
+@mixin tablet-up
+    @media screen and (min-width: $breakpoint-tablet)
+        @content
+
+@mixin desktop-up
+    @media screen and (min-width: $breakpoint-desktop)
+        @content

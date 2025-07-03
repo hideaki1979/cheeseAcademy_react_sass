@@ -1,0 +1,123 @@
+@use 'variables' as v
+
+// Courseセクション全体
+.course
+    margin-bottom: v.$section-margin
+    padding: v.$section-margin 0
+    background-color: v.$background-light
+
+    // コンテナ
+    &__container
+        max-width: v.$container-width
+        margin: 0 auto
+        padding: 0 v.$padding-desktop
+
+        @include v.tablet
+            padding: 0 v.$padding-tablet
+
+        @include v.mobile
+            padding: 0 v.$padding-mobile
+
+    //  説明
+    &__description
+        text-align: center
+        margin-bottom: v.$course-title-margin
+
+        p
+            font-size: v.$font-size-base
+            line-height: v.$course-line-height
+
+            @include v.mobile
+                line-height: v.$course-line-height-mobile
+                br
+                    display: none
+
+    // コースボックスコンテナー
+    &__boxes
+        display: flex
+        flex-direction: column
+        gap: v.$course-box-margin
+
+    // コースボックス
+    &__box
+        display: flex
+        align-items: stretch
+        background-color: v.$background-gray
+        min-height: 400px
+        opacity: 0
+        transform: translateY(30px)
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out
+
+        &--animate
+            opacity: 1
+            transform: translateY(0)
+
+        @include v.tablet
+            min-height: 350px
+
+        @include v.mobile
+            flex-direction: column
+            min-height: auto
+
+        // リバースレイアウト
+        &--reverse
+            flex-direction: row-reverse
+
+            .course__content
+                text-align: left
+
+            @include v.mobile
+                flex-direction: column
+                .course__content
+                    text-align: left
+
+    &__image
+        flex: 1
+        overflow: hidden
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: transform 0.3s ease
+
+            &:hover
+                transform: scale(1.1)
+
+    // コースコンテンツ
+    &__content
+        flex: 1
+        padding: v.$course-box-padding
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        @include v.tablet
+            padding: v.$course-box-padding-tablet
+
+        @include v.mobile
+            padding: v.$course-box-padding-mobile
+
+    // コースコンテンツタイトル
+    &__item-title
+        font-size: v.$font-size-title
+        font-weight: bold
+        margin-bottom: v.$course-title-margin
+        line-height: 1.5
+
+        @include v.mobile
+            margin-bottom: v.$course-title-margin-mobile
+            font-size: v.$font-size-base
+
+    // コースコンテンツ説明
+    &__item-description
+        font-size: v.$font-size-base
+        line-height: v.$course-line-height
+        white-space: pre-line
+
+        @include v.mobile
+            line-height: v.$course-line-height-mobile
+            font-size: 14px
+
+        span
+            display: inline
