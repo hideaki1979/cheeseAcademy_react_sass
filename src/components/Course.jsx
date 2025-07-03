@@ -103,12 +103,7 @@ const Course = () => {
                             <div className='course__content'>
                                 <h4 className='course__item-title'>{course.title}</h4>
                                 <p className='course__item-description'>
-                                    {course.description.split(`\n`).map((line, index, array) => (
-                                        <span key={index}>
-                                            {line}
-                                            {index < array.length - 1 && <br />}
-                                        </span>
-                                    ))}
+                                    {course.description}
                                 </p>
                             </div>
                         </div>

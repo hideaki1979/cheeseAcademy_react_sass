@@ -11,7 +11,7 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    gap: 16px
+    gap: 24px
     max-width: v.$container-width
     margin: 0 auto
     padding: 0 24px
@@ -27,10 +27,6 @@
     min-width: 280px
     max-width: 360px
     margin-bottom: 24px
-
-    // 2番目の要素にマージンを設定（参考ソースの.news_box:nth-child(2)）
-    &:nth-child(2)
-        margin: 0 24px
 
     // 画像部分
     &__picture
@@ -57,16 +53,20 @@
         font-size: v.$font-size-title
         font-weight: bold
 
+    // テキスト
+    &__title
+        color: v.$text-color
+        font-size: v.$font-size-base
+        font-weight: bold
+
     // 本文
     &__text
         color: v.$text-color
-        font-size: 15px
+        font-size: 14px
 
     @include v.mobile
         max-width: 100%
-
-        &:nth-child(2)
-            margin: 0
+        gap: 0
 
 // moreボタンのラッパー
 .news-more-wrapper

@@ -39,11 +39,13 @@ const Header = () => {
                     aria-label='モバイルメニュー'
                     aria-hidden={!isMenuOpen}
                 >
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#course">COURSE</a></li>
-                    <li><a href="#news">NEWS</a></li>
-                    <li><a href="#access">ACCESS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <ul>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#course">COURSE</a></li>
+                        <li><a href="#news">NEWS</a></li>
+                        <li><a href="#access">ACCESS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
                 </nav>
             </div>
 

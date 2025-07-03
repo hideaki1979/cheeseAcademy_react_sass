@@ -6,7 +6,7 @@ const News = () => {
         {
             id: 1,
             date: '2016/11/18',
-            title: 'チーズアカデミー卒業生のコスゲさんによる',
+            title: '卒業生のコスゲさんピザ屋オープン',
             description: 'チーズだけをふんだんに使用した話題のピザ屋「Kosuge Pizza」が渋谷でオープンしました！',
             image: '/img/news_img.jpg'
         },
@@ -35,9 +35,9 @@ const News = () => {
     }
 
     return (
-        <div id='news'>
-            <p className='entitle'>NEWS</p>
-            <p className='jatitle'>ニュース</p>
+        <section id='news'>
+            <h2 className='entitle'>NEWS</h2>
+            <h3 className='jatitle'>ニュース</h3>
 
             <div className='news-boxes'>
                 {newsData.map((news) => (
@@ -47,8 +47,10 @@ const News = () => {
                         </div>
                         <div className='news-box__description'>
                             <p className='news-box__date'>{news.date}</p>
+                            <p className='news-box__title'>
+                                {news.title}
+                            </p>
                             <p className='news-box__text'>
-                                {news.title}<br />
                                 {news.description}
                             </p>
                         </div>
@@ -65,7 +67,7 @@ const News = () => {
                     more
                 </button>
             </div>
-        </div>
+        </section>
     )
 }
 

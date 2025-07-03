@@ -63,14 +63,13 @@
         &--reverse
             flex-direction: row-reverse
 
+            .course__content
+                text-align: right
+
             @include v.mobile
                 flex-direction: column
+                text-align: left
 
-                .course__content
-                    text-align: right
-
-                    @include v.mobile
-                        text-align: left
     &__image
         flex: 1
         overflow: hidden
@@ -113,6 +112,7 @@
     &__item-description
         font-size: v.$font-size-base
         line-height: v.$course-line-height
+        white-space: pre-line
 
         @include v.mobile
             line-height: v.$course-line-height-mobile
