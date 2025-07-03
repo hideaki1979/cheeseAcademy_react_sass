@@ -64,11 +64,12 @@
             flex-direction: row-reverse
 
             .course__content
-                text-align: right
+                text-align: left
 
             @include v.mobile
                 flex-direction: column
-                text-align: left
+                .course__content
+                    text-align: left
 
     &__image
         flex: 1
