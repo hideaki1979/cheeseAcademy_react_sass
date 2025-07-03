@@ -1,0 +1,204 @@
+@use 'variables' as v
+
+#contact
+    margin-top: v.$section-margin
+
+    @include v.mobile
+        margin-top: v.$section-margin-mobile
+
+.contact
+    &__content
+        max-width: v.$contact-form-max-width
+        margin: 0 auto
+        padding: 0 v.$padding-mobile
+
+        @include v.tablet-up
+            padding: 0 v.$padding-tablet
+        @include v.desktop-up
+            padding: 0 v.$padding-desktop
+
+    &__description
+        text-align: center
+        margin-bottom: v.$contact-content-margin-bottom
+        line-height: 1.7
+
+        @include v.mobile
+            margin-bottom: v.$contact-content-margin-bottom-mobile
+            line-height: 1.5
+
+        &-main
+            font-size: v.$font-size-base
+            color: v.$text-color
+            margin-bottom: v.$contact-description-margin-bottom
+
+        &-note
+            font-size: v.$font-size-small
+            color: v.$text-gray
+
+    &__form
+        width: 100%
+
+    &__table
+        width: 100%
+        margin-bottom: v.$contact-description-margin-bottom
+        border-collapse: collapse
+
+    &__item,
+    &__body
+        padding: v.$contact-table-padding
+        border: 1px solid v.$border-color
+        vertical-align: middle
+
+        @include v.mobile
+            padding: v.$contact-content-margin-bottom-mobile
+
+    &__item
+        text-align: left
+        background-color: v.$background-gray
+        font-weight: bold
+        width: v.$contact-table-item-width
+
+        @include v.mobile
+            width: 100%
+            display: block
+            text-align: center
+
+        &-multiline
+            line-height: 1.5
+
+    &__body
+        width: v.$contact-table-body-width
+
+        @include v.mobile
+            width: 100%
+            display: block
+
+    &__input
+        width: 100%
+        max-width: v.$contact-input-max-width
+        padding: 10px
+        border: 1px solid v.$border-color
+        border-radius: 8px
+        font-size: v.$font-size-base
+
+        @include v.mobile
+            max-width: 100%
+
+        &:focus
+            outline: nome
+            border-color: v.$primary-color
+
+    // セレクトボックスのスタイリング修正
+    &__select-wrapper
+        position: relative
+        width: 100%
+
+        // 矢印アイコンを追加
+        &::after
+            content: '▼'
+            position: absolute
+            top: 50%
+            right: 16px
+            transform: translateY(-50%)
+            pointer-events: none
+            color: #888
+            font-size: 14px
+
+    &__select
+        width: 100%
+        padding: 5px 30px 5px 10px // 右側に矢印のスペースを確保
+        border: 1px solid v.$border-color
+        border-radius: 8px
+        font-size: v.$font-size-base
+        background-color: v.$white
+        background: v.$white
+        cursor: pointer
+        appearance: none
+        -webkit-appearance: none
+        -moz-appearance: none
+
+        &:focus
+            outline: none
+            border-block-color: v.$primary-color
+
+    &__motivations
+        display: flex
+        flex-direction: column
+        gap: v.$contact-motivation-gap
+
+    &__motivation
+        display: flex
+        align-items: center
+        cursor: pointer
+        position: relative
+
+    .contact__motivation input[type="checkbox"]
+        appearance: auto
+        -webkit-appearance: auto
+        -moz-appearance: auto
+        width: 16px
+        height: 16px
+        margin-right: 8px
+        accent-color: v.$primary-color
+        border: 2px solid #888
+        background: #fff
+
+    &__textarea
+        width: 100%
+        height: v.$contact-textarea-height
+        padding: 8px
+        border: 1px solid v.$border-color
+        border-radius: 8px
+        font-size: v.$font-size-base
+        font-family: v.$font-family
+        resize: vertical
+
+        &:focus
+            outline: none
+            border-block-color: v.$primary-color
+
+        &::placeholder
+            color: v.$text-light
+
+    &__submit
+        width: v.$contact-button-width
+        background-color: v.$text-color
+        color: v.$white
+        font-weight: bold
+        display: block
+        margin: v.$contact-button-marginY auto
+        font-size: v.$font-size-section
+        padding: v.$contact-button-padding
+        border-radius: 50px
+        border: none
+        text-align: center
+        cursor: pointer
+        transition: all .5s ease
+
+        @include v.mobile
+            width: 100%
+            max-width: v.$contact-button-width
+
+        &:hover
+            background-color: v.$button-hover
+            color: v.$text-color
+            transform: translateY(-3px)
+
+        &:active
+            transform: translateY(0)
+
+// レスポンシブ対応でテーブルレイアウトを調整
+@include v.mobile
+    .contact
+        &__table,
+        &__table tbody,
+        &__table tr,
+        &__table td,
+        &__table th
+            display: block
+
+        &__table tr
+            margin-bottom: 20px
+            border: 1px solid v.$border-color
+            border-radius: 8px
+            overflow: hidden
