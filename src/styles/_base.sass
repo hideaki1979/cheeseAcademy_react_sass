@@ -1,0 +1,27 @@
+@use 'variables' as v
+
+// ベース設定
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    max-width: v.$container-width
+    margin: 0 auto
+    padding: 0 v.$content-padding
+    font-family: v.$font-family
+    font-weight: 400
+    font-style: normal
+    overflow-x: hidden
+
+    // タブレット・モバイルでのパディング調整
+    @include v.tablet
+        padding: 0 24px
+
+    @include v.mobile
+        padding: 0 16px
+
+a
+    text-decoration: none
+    color: v.$text-color

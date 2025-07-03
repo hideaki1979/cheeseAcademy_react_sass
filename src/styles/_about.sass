@@ -1,0 +1,79 @@
+@use './variables' as v
+
+.about
+    margin-bottom: v.$section-margin
+    padding: v.$section-margin 0
+    background-color: v.$background-light
+
+    &__content
+        // レスポンシブパディング調整
+        @include v.desktop
+            padding: 0 v.$padding-desktop
+        @include v.tablet
+            padding: 0 v.$padding-tablet
+        @include v.mobile
+            padding: 0 v.$padding-mobile
+
+    &__description
+        text-align: center
+        margin-bottom: 56px
+
+        p
+            margin-bottom: 24px
+            line-height: 1.7
+            color: v.$text-color
+
+            // モバイル対応でbr要素を非表示
+            @include v.mobile
+                br
+                    display: none
+
+    // 無限スクロール画像カルーセル
+    &__image-carousel
+        overflow: hidden
+        margin-bottom: 40px
+        padding: 20px 0
+
+    &__image-track
+        display: flex
+        width: calc(100% * 2) // 画像の2セット分の幅
+        animation: scroll-infinite 30s linear infinite
+
+        // ホバー時にアニメーション停止
+        &:hover
+            animation-play-state: paused
+
+    &__image-item
+        flex: 0 0 auto
+        cursor: pointer
+
+        img
+            margin-right: 24px
+            aspect-ratio: 4/3 // 4:3の比率を強制
+            object-fit: cover
+            border-radius: 12px
+            transition: transform 0.3s ease
+
+            // 全てのサイズで統一された幅を設定
+            @include v.desktop
+                width: 240px
+
+            @include v.tablet
+                width: 200px
+
+            @include v.mobile
+                width: 160px
+
+            @include v.mobile
+                border-radius: 8px
+                margin-right: 16px
+
+            &:hover
+                transform: scale(1.1)
+
+// 無限スクロールアニメーション
+@keyframes scroll-infinite
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(calc(-100% / 2)) // 1/2移動することで無限ループ効果
