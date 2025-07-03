@@ -28,19 +28,21 @@
         left: 0
         width: 100%
         height: 100%
-        border: 0
+        border: none
         border-radius: 8px
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3)
 
     &__info
         background: v.$background-light
-        padding: v.$access-info-padding-top v.$padding-mobile v.$access-info-padding-bottom
+        padding-top: v.$access-info-padding-top
+        padding-bottom: v.$access-info-padding-bottom
+        padding-inline: v.$padding-mobile
 
         @include v.tablet-up
-            padding: v.$access-info-padding-top v.$padding-tablet v.$access-info-padding-bottom
+            padding-inline: v.$padding-tablet
 
         @include v.desktop-up
-            padding: v.$access-info-padding-top v.$padding-desktop v.$access-info-padding-bottom
+            padding-inline: v.$padding-desktop
 
     &__table
         width: 100%
