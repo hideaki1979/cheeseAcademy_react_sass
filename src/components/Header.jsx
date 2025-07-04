@@ -12,7 +12,7 @@ const Header = () => {
             {/* モバイル・タブレット用：ハンバーガーメニュー */}
             <div className='hamburger-area'>
                 {/* ロゴ */}
-                <img src="/img/header_logo.png" alt="チーズアカデミーのヘッダーロゴ" />
+                <img src="img/header_logo.png" alt="チーズアカデミーのヘッダーロゴ" />
 
                 {/* ハンバーガーボタン */}
                 <div
@@ -52,7 +52,7 @@ const Header = () => {
             {/* デスクトップナビ */}
             <div className='tabmenu-animation'>
                 <div className='tabmenu-area'>
-                    <img src="/img/header_logo.png" alt="チーズアカデミーのヘッダーロゴ" />
+                    <img src="img/header_logo.png" alt="チーズアカデミーのヘッダーロゴ" />
                     <div className='header-link'>
                         <a href="#about">ABOUT</a>
                         <a href="#course">COURSE</a>
