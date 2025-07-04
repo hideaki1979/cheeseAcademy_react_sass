@@ -8,7 +8,7 @@ const News = () => {
             date: '2016/11/18',
             title: '卒業生のコスゲさんピザ屋オープン',
             description: 'チーズだけをふんだんに使用した話題のピザ屋「Kosuge Pizza」が渋谷でオープンしました！',
-            image: './img/news_img.jpg'
+            image: 'img/news_img.jpg'
         },
         {
             id: 2,
