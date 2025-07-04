@@ -6,7 +6,7 @@ const Course = () => {
     const courseData = [
         {
             id: 1,
-            image: "/img/course_01.jpg",
+            image: "img/course_01.jpg",
             title: "本格的な農園を使った実地研修",
             description: `チーズアカデミーでは、本格的な農園を使った実地研修を
     行うことができます。プロとして活躍するチーズ職人も
@@ -17,7 +17,7 @@ const Course = () => {
         },
         {
             id: 2,
-            image: "/img/course_02.jpg",
+            image: "img/course_02.jpg",
             title: "必要な知識もしっかりと取得",
             description: `チーズ作りには、しっかりとした食に関する知識が
     欠かせません。チーズアカデミーでは、一流講師陣による、
@@ -28,7 +28,7 @@ const Course = () => {
         },
         {
             id: 3,
-            image: "/img/course_03.jpg",
+            image: "img/course_03.jpg",
             title: "卒業制作はティスティング審査あり",
             description: `チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。
     卒業制作として、チーズ作りを実際に行います。卒業後、

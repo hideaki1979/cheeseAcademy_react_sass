@@ -8,21 +8,21 @@ const News = () => {
             date: '2016/11/18',
             title: '卒業生のコスゲさんピザ屋オープン',
             description: 'チーズだけをふんだんに使用した話題のピザ屋「Kosuge Pizza」が渋谷でオープンしました！',
-            image: '/img/news_img.jpg'
+            image: './img/news_img.jpg'
         },
         {
             id: 2,
             date: '2016/10/15',
             title: 'チーズアカデミー新コース開始のお知らせ',
             description: '初心者向けのベーシックコースが新たに開講されます。より多くの方にチーズ作りの楽しさを体験していただけます。',
-            image: '/img/news_img.jpg'
+            image: 'img/news_img.jpg'
         },
         {
             id: 3,
             date: '2016/09/28',
             title: 'チーズフェスティバル開催決定',
             description: '毎年恒例のチーズフェスティバルが今年も開催されます。卒業生の作品展示や試食会も予定しています。',
-            image: '/img/news_img.jpg'
+            image: 'img/news_img.jpg'
         }
     ]
 

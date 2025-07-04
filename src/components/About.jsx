@@ -35,7 +35,7 @@ const About = () => {
                         {/* 画像を2セット分レンダリングして無限ループ効果を作る */}
                         {[...aboutImages, ...aboutImages].map((image, index) => (
                             <div key={index} className='about__image-item'>
-                                <img src={`/img/${image.filename}`} alt={image.alt} />
+                                <img src={`img/${image.filename}`} alt={image.alt} />
                             </div>
                         ))}
                     </div>
