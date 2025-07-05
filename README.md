@@ -3,6 +3,9 @@
 React + Vite + Sass で作成したチーズ職人養成学校「チーズアカデミー TOKYO」の公式 Web サイトです。
 レスポンシブデザインに対応し、モダンな UI とスムーズなアニメーションを実装した Web サイトです。
 
+- URL
+  [https://hideaki1979.github.io/cheeseAcademy_react_sass/](https://hideaki1979.github.io/cheeseAcademy_react_sass/)
+
 ## 機能
 
 - **レスポンシブデザイン**: PC・タブレット・スマートフォンに完全対応

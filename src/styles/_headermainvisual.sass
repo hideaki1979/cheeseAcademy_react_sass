@@ -155,29 +155,31 @@
 
 // メインビジュアル
 .mainvisual
-    background: url('/img/mainbg.png') no-repeat center / cover
-    height: 440px
+    background: url('img/mainbg.png') no-repeat center / cover
     color: v.$white
-    text-align: center
-    padding-top: 180px
     margin-bottom: v.$section-margin
     border: 2px solid v.$text-light
     border-radius: 30px
 
-    // タブレット・モバイル対応
-    @include v.tablet
-        height: 320px
-        padding-top: 120px
-        border-radius: 20px
+    .content
+        height: 440px
+        display: flex
+        align-items: center
+        justify-content: center
 
-    @include v.mobile
-        height: 240px
-        padding-top: 104px
-        border-radius: 15px
-        margin-bottom: 40px
+        // タブレット・モバイル対応
+        @include v.tablet
+            height: 320px
+            border-radius: 20px
+
+        @include v.mobile
+            height: 240px
+            border-radius: 15px
+            margin-bottom: 40px
 
 .maintitle
     animation: slideIn 1s ease-in-out
+    text-align: center
     // 各デバイスサイズでのフォントサイズ調整
     @include v.desktop
         font-size: v.$font-size-medium

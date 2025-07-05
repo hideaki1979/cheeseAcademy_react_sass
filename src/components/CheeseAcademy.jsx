@@ -12,12 +12,14 @@ const CheeseAcademy = () => {
     return (
         <div className='wrap'>
             <Header />
-            <MainVisual />
-            <About />
-            <Course />
-            <News />
-            <Access />
-            <Contact />
+            <main>
+                <MainVisual />
+                <About />
+                <Course />
+                <News />
+                <Access />
+                <Contact />
+            </main>
         </div>
     )
 }

@@ -2,7 +2,6 @@
 // ACCESSセクション
 .access
     margin-top: v.$section-margin
-    padding: 0 v.$padding-mobile
 
     @include v.tablet-up
         padding: 0 v.$padding-tablet
@@ -36,13 +35,6 @@
         background: v.$background-light
         padding-top: v.$access-info-padding-top
         padding-bottom: v.$access-info-padding-bottom
-        padding-inline: v.$padding-mobile
-
-        @include v.tablet-up
-            padding-inline: v.$padding-tablet
-
-        @include v.desktop-up
-            padding-inline: v.$padding-desktop
 
     &__table
         width: 100%

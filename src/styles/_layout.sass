@@ -2,9 +2,28 @@
 
 .wrap
     // メインのラッパー
+    max-width: v.$container-width
+    margin: 0 auto
+    padding: 0 v.$padding-mobile
+
+    @include v.tablet-up
+        padding: 0 v.$padding-tablet
+
+    @include v.desktop-up
+        padding: 0 v.$padding-desktop
 
 .content
     // メインコンテンツ
+    width: 100%
+    max-width: v.$container-width
+    margin: 0 auto
+    padding: 0 v.$padding-mobile
+
+    @include v.tablet-up
+        padding: 0 v.$padding-tablet
+
+    @include v.desktop-up
+        padding: 0 v.$padding-desktop
 
 // 共通タイトル
 .entitle
