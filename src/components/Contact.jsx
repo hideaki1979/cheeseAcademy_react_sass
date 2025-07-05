@@ -98,7 +98,7 @@ const Contact = () => {
                         </tr>
                         <tr>
                             <th className='contact__item'>
-                                <label htmlFor='kana'>
+                                <label htmlFor='email'>
                                     メール
                                 </label>
                             </th>
