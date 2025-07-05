@@ -79,36 +79,34 @@ const Course = () => {
 
     return (
         <section id='course' className='course'>
-            <div className='course__container'>
-                <h2 className='entitle'>COURSE</h2>
-                <h3 className='jatitle'>コースについて</h3>
-                <div className='course__description'>
-                    <p>
-                        未経験からでもスタートができるよう、カリキュラムは多くの専門家や
-                        <br />
-                        現役チーズ職人のアドバイスのもと、作られました。
-                    </p>
-                </div>
+            <h2 className='entitle'>COURSE</h2>
+            <h3 className='jatitle'>コースについて</h3>
+            <div className='course__description'>
+                <p>
+                    未経験からでもスタートができるよう、カリキュラムは多くの専門家や
+                    <br />
+                    現役チーズ職人のアドバイスのもと、作られました。
+                </p>
+            </div>
 
-                <div className='course__boxes'>
-                    {courseData.map((course, index) => (
-                        <div
-                            key={course.id}
-                            ref={(el) => courseBoxRef.current[index] = el}
-                            className={`course__box ${course.reverse ? 'course__box--reverse' : ''}`}
-                        >
-                            <div className='course__image'>
-                                <img src={course.image} alt={course.title} />
-                            </div>
-                            <div className='course__content'>
-                                <h4 className='course__item-title'>{course.title}</h4>
-                                <p className='course__item-description'>
-                                    {course.description}
-                                </p>
-                            </div>
+            <div className='course__boxes'>
+                {courseData.map((course, index) => (
+                    <div
+                        key={course.id}
+                        ref={(el) => courseBoxRef.current[index] = el}
+                        className={`course__box ${course.reverse ? 'course__box--reverse' : ''}`}
+                    >
+                        <div className='course__image'>
+                            <img src={course.image} alt={course.title} />
                         </div>
-                    ))}
-                </div>
+                        <div className='course__content'>
+                            <h4 className='course__item-title'>{course.title}</h4>
+                            <p className='course__item-description'>
+                                {course.description}
+                            </p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </section>
     )
